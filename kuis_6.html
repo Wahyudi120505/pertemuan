@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .product{
+            border: 1px solid red;
+            display: flex;
+            flex-wrap: wrap;
+            margin: 10px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 1);
+            border-radius: 10px;
+            line-height: 22px;
+        }
+
+        figcaption{
+            margin-top: 10px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        h1{
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+
+        p{
+            font-size: 19px;
+        }
+
+        button{
+            padding: 5px;
+            cursor: pointer;
+            margin-left: 8px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        img{
+            border-radius: 15px;
+        }
+
+    </style>
+    
+</head>
+<body>
+    
+    <script>
+        
+        const production = [
+            {
+                id : "1",
+                img : "https://tse4.mm.bing.net/th?id=OIP.dB24XlY-rM2JPRHxNqYB4wHaFj&pid=Api&P=0&h=180",
+                name : "Product A",
+                price : "Rp.100.000"
+            },
+
+            {
+                id : "2",
+                img : "https://tse4.mm.bing.net/th?id=OIP.dB24XlY-rM2JPRHxNqYB4wHaFj&pid=Api&P=0&h=180",
+                name : "Product B",
+                price : "Rp.100.000"
+            },
+            
+            {
+                id : "3",
+                img : "https://tse4.mm.bing.net/th?id=OIP.dB24XlY-rM2JPRHxNqYB4wHaFj&pid=Api&P=0&h=180",
+                name : "Product C",
+                price : "Rp.100.000"
+            },
+            
+            {
+                id : "4",
+                img : "https://tse4.mm.bing.net/th?id=OIP.dB24XlY-rM2JPRHxNqYB4wHaFj&pid=Api&P=0&h=180",
+                name : "Product D",
+                price : "Rp.100.000"
+            },
+            
+            {
+                id : "5",
+                img : "https://tse4.mm.bing.net/th?id=OIP.dB24XlY-rM2JPRHxNqYB4wHaFj&pid=Api&P=0&h=180",
+                name : "Product E",
+                price : "Rp.100.000"
+            },
+            
+        ];
+        // let main = document.getElementById("main");
+        // main.appendChild(
+        production.forEach((product) => {
+            document.write(`
+                <div class="product">
+                    <figure>
+                        <img src="${product.img}" alt="${product.name}">
+                        <figcaption>
+                            <h1>${product.name}</h1 >
+                            <p>${product.price}</p>
+                        </figcaption>
+                        <div class = button>
+                            <button onclick="confirm('anda yakin ingin membeli')">Add to Cart</button>
+                            <button onclick="alert('anda menyukai produk ini')">Like</button>
+                            <button onclick="prompt('komentar')">Comment</button>
+                        </div>
+                    </figure> 
+                </div>
+            `);
+           
+        });
+
+        // let komen = document.createElement('button');
+        // komen = prompt("komentar");
+    </script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // let biodata = {
+    //     name_firs : 'Wahyudi',
+    //     name_last : 'Tanjung',
+    //     age : 20,
+    //     gender : 'Man',
+    //     hobbies : [
+    //         'Coding',
+    //         'Reading',
+    //         'Listening Music'
+    //     ]
+    // };
+
+    // alert(`assalamualaikum ${biodata.name_firs}`);
+
+    // document.write('nama saya : ' + biodata.name_firs + biodata.name_last + '<br>');
+    // document.write('umur saya :'+ biodata.age + '<br>');
+    // document.write('gender saya :'+ biodata.gender + '<br>');
+    // document.write('hobi saya :'+ biodata.hobbies + '<br>');
+
+    let biodata = {
+        name : prompt('input nama anda :'),
+        age : prompt('input umur anda :'),
+        gender : prompt('input gender anda :'),
+        hobbies :   [
+                        prompt('input hobi anda 1 :'), 
+                        prompt('input hobi anda 2 :')
+                    ]
+
+
+    }
+
+
+    let example = confirm("apakah anda ingin melanjutkan nya :")
+   
+            document.write(
+            `
+            nama saya : ${biodata.name} <br>
+            umur saya : ${biodata.age} <br>
+            gender saya : ${biodata.gender} <br>
+            hobi saya : ${biodata.hobbies[0]},
+                        ${biodata.hobbies[1]} <br>
+                    
+            `
+        )
+
+  
+
+
+    </script>
+</body>
+</html>
